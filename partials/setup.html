@@ -1,0 +1,6 @@
+<div class="challenge-selector">
+	<div ng-repeat='(operation, _) in functions'>
+		<input id='{{"checkbox-"+operation}}' type='checkbox' ng-model='functions[operation]["selected"]' />
+		<label for='{{"checkbox-"+operation}}'>{{operation}}</label>
+	</div>
+</div>

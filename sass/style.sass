@@ -1,0 +1,114 @@
+
+p
+	margin: 0
+
+body
+	background-color: #565656
+	margin: 0
+	padding: 0
+	overflow: hidden
+button 
+	background-color: green
+	color: white
+	border: none
+	padding: 10px 30px 10px 30px
+	font-size: 20px
+
+.index-page-tabs
+	list-style-type: none
+	width: 100%
+	height: 50px
+	margin: 0px
+	padding: 0px
+	
+	.index-page-single-tab
+		display: inline
+		width: 100px
+		float: left
+		background-color: white
+		height: 50px
+		cursor: pointer
+
+		p
+			margin : 10px
+			display: block
+			text-align: center
+	
+	.index-page-single-tab:hover
+		background-color: #dfdfdf
+
+
+	.active
+		@extend .index-page-single-tab
+		background-color: green
+		color: white
+	
+	.active:hover
+		background-color: rgba(0,255,0,0.2)
+
+.challenge-selector
+	width: 300px
+	padding-top: 100px
+	font-size: 20px
+	margin: auto
+
+	input[type='checkbox'] 
+		width: 20px
+		height: 20px
+
+.main-page-content-panel
+
+	width: 100%
+	position: absolute
+	background-color: white
+	height: 100%	
+	
+.main-page-content-panel-inner
+	@extend .main-page-content-panel
+
+.answer-section
+	display: table-cell
+	width: 75%
+	padding: 10px
+
+.results-section
+	display: table-cell
+	width: 25%
+	vertical-align: top
+	background-color: #a6a6a6
+	padding: 20px
+	color: white
+	.metric-title
+		font-size: 20px
+		font-weight: bold
+	.metric-values
+		font-size: 28px
+		text-align: right
+
+.excercise-text 
+	font-size : 76px
+	float: left
+	width: 70%
+	margin-top: 76px
+	text-align: right
+
+.answer-field
+	width: 25%
+	font-size : 76px
+	margin-top: 76px
+	margin-bottom: 76px
+
+.correct
+	@extend .answer-field
+	background-color: rgba(0,255,0,0.5) 
+
+.incorrect
+	@extend .answer-field
+	background-color: rgba(255,0,0,0.5) 
+
+.disabled-button 
+	background: rgba(0,255,0,0.5)
+
+.middle-phrase 
+	text-align: center
+	margin-top: 100px

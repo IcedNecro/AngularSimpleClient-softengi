@@ -1,0 +1,26 @@
+<div  ng-if='empty==false'>
+	<form  name='form' class="answer-section">
+		<p class="excercise-text">{{ sample }}</p>
+		<input ng-if='answered==false' class="answer-field" type="text" ng-model='$parent.$parent.answer' name='answer' integer />
+		<input ng-if='answered==true && ok==true' class="answer-field correct" type="text" ng-model='$parent.$parent.answer' name='answer' integer disabled="disabled" />
+
+		<input ng-if='answered==true && ok==false' class="answer-field incorrect" type="text" ng-model='$parent.$parent.answer' name='answer' integer disabled="disabled" />
+
+		<span ng-show="form.answer.$valid">
+			<button ng-if='answered==false' ng-click='submit_answer()'>Submit</button>
+			<button ng-if='answered==true' ng-click='generate_excercise()'>Next</button>
+		</span>
+
+		<span ng-show="form.answer.$error.integer">
+			<button class='disabled-button' ng-if='answered==false' >Submit</button>
+		</span>
+
+	</form>
+	<div class="results-section">
+		<p class="metric-title">Correct Answers:</p><p class="metric-values">{{ results.correctAnswers }}</p>
+		<p class="metric-title">Incorrect Answers:</p><p class="metric-values"> {{ results.incorrectAnswers }}</p>
+	</div>
+</div>
+<div  ng-if='empty==true'>
+	<p class="middle-phrase">Choose operations to test in <a ng-href='/#/test'>Setup</a> tab</p>
+</div>

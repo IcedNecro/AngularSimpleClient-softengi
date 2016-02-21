@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app='math_checker'>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src='bower_components/angular/angular.min.js'></script>
+	<script type="text/javascript" src='bower_components/angular-route/angular-route.min.js'></script>
+	<script type="text/javascript" src='bower_components/jQuery/dist/jquery.min.js'></script>
+
+	<script type="text/javascript" src='app.js'></script>
+	<script type="text/javascript" src='js/revision_controller.js'></script>
+	<script type="text/javascript" src='js/services.js'></script>
+
+	<script type="text/javascript" src='js/directives.js'></script>
+	<script type="text/javascript" src='js/test_controller.js'></script>
+	<script type="text/javascript" src='js/index_controller.js'></script>
+
+	<title>
+	
+	</title>
+</head>
+<body ng-controller='index_controller'>
+
+	<menu class="index-page-tabs">
+		<li ng-if='$root.current_tab=="test"' class="index-page-single-tab active"><p>Setup</p></li>
+		<li ng-if='$root.current_tab!="test"' ng-click='redirect("/test", "test")' class="index-page-single-tab"><p>Setup</p></li>
+		
+		<li ng-if='$root.current_tab=="revise"' class="index-page-single-tab active"><p>Revise</p></li>
+
+		<li ng-if='$root.current_tab!="revise"'  ng-click='redirect("/revise", "revise")' class="index-page-single-tab"><p>Revise</p></li>
+	</menu>
+	<div class="main-page-content-panel">
+		<div class="main-page-content-panel-inner">
+
+			<div ng-view></div>
+		</div>
+	</div>
+</body>
+</html>

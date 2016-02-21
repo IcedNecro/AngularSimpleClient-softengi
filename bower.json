@@ -1,0 +1,16 @@
+{
+  "name": "softengi_task",
+  "authors": [
+    "Roman Statkevych <romanstatkevich@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "jQuery": "~2.2.0"
+  }
+}
